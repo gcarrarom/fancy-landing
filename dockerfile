@@ -1,6 +1,7 @@
 FROM node
 COPY . /fancy-landing
 WORKDIR /fancy-landing
+RUN npm install
 RUN npm run build
 RUN cp ./index.html ./dist/
 
