@@ -2,24 +2,54 @@
   <v-app>
     <v-main>
       <v-container class="fill-height">
-        <v-col align="center" justify="center">
-          <v-avatar size="200" color="red">
+        <v-row align="center" justify="center">
+          <v-col>
+          <v-row class="ma-auto pa-auto" justify="center" align="center">
+          <v-avatar size="30rem" v-if="$vuetify.breakpoint.mobile">
             <img
               src="https://avatars3.githubusercontent.com/u/10549675?u=97b71df3159820a5f6659275e71b654d0bcd1cb5"
               alt="alt"
             />
           </v-avatar>
-          <h1>FancyWhale</h1>
-          <v-btn flat icon href="https://github.com/gcarrarom">
-            <v-icon>mdi-github</v-icon>
-          </v-btn>
-          <v-btn flat icon href="https://linkedin.com/in/guicarraro">
-            <v-icon>mdi-linkedin</v-icon>
-          </v-btn>
-          <v-btn flat icon href="mailto:gmartins@fancywhale.ca">
-            <v-icon>mdi-email</v-icon>
-          </v-btn>
-        </v-col>
+          <v-avatar size="20rem" v-else>
+            <img
+              src="https://avatars3.githubusercontent.com/u/10549675?u=97b71df3159820a5f6659275e71b654d0bcd1cb5"
+              alt="alt"
+            />
+          </v-avatar>
+          </v-row>
+          <v-row class="ma-auto pa-auto" justify="center" align="center">
+            <h1 class="text-h2">FancyWhale</h1>
+          </v-row>
+          <v-row class="ma-auto pa-auto center" justify="center" align="center">
+            <v-col md="auto">
+            <v-btn
+              flat
+              icon
+              href="https://github.com/gcarrarom"
+            >
+              <v-icon class="ma-auto pa-auto" x-large="true">mdi-github</v-icon>
+            </v-btn>
+            </v-col>
+            <v-col md="auto">
+            <v-btn
+              icon
+              href="https://linkedin.com/in/guicarraro"
+            >
+              <v-icon class="ma-auto pa-auto" x-large="true">mdi-linkedin</v-icon>
+            </v-btn>
+            </v-col>
+            <v-col md="auto">
+            <v-btn
+              icon
+              href="mailto:gmartins@fancywhale.ca"
+            >
+              <v-icon class="ma-auto pa-auto" x-large="true">mdi-email</v-icon>
+            </v-btn>
+            </v-col>
+          </v-row>
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
     <v-footer>
@@ -44,10 +74,4 @@ export default {
 };
 </script>
 
-<style>
-.h1 {
-  font-family: "Roboto Mono script=latin rev=2";
-  font-weight: 400;
-  font-style: normal;
-}
-</style>
+<style></style>
